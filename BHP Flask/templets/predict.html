@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Prediction Result{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-lg">
+        <div class="card-header bg-success text-white text-center">
+            <h2>Prediction Result</h2>
+        </div>
+        <div class="card-body">
+            <h5 class="mb-3">House Details</h5>
+            <ul class="list-group mb-4">
+                <li class="list-group-item"><strong>Total Sqft:</strong> {{ total_sqft }}</li>
+                <li class="list-group-item"><strong>Bathrooms:</strong> {{ bath }}</li>
+                <li class="list-group-item"><strong>BHK:</strong> {{ bhk }}</li>
+                <li class="list-group-item"><strong>Location:</strong> {{ location }}</li>
+            </ul>
+
+            <div class="alert alert-info text-center">
+                <h4>Estimated Price: <strong>{{ predicted_price }} Lakh</strong></h4>
+            </div>
+
+            <div class="text-center">
+                <a href="/" class="btn btn-primary">Predict Another</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

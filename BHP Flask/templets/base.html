@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Title{% endblock %}</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        footer {
+            margin-top: 50px;
+            padding: 15px 0;
+            text-align: center;
+            background: #343a40;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">🏠 House Price Predictor</a>
+        </div>
+    </nav>
+
+    <!-- Main content container -->
+    <main class="container mt-4">
+        {% block content %}
+        <h1>Welcome to the Base Template</h1>
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; {{ year | default(2025) }} Bangalore House Price Prediction | Powered by Flask | made by Uday Suryavanshi</p>
+        <div class="social-links" flex justify-content-center>
+        <a href="https://github.com/uday9067" target="_blank">GitHub</a>
+        <a href="www.linkedin.com/in/uday-suryavanshi-7971a8286" target="_blank">LinkedIn</a>
+    </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
